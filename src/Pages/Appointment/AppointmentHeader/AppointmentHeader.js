@@ -7,7 +7,6 @@ import { Container } from '@mui/material';
 import chair from '../../../images/chair.png'
 import Calendar from '../../Shared/Calendar/Calendar';
 
-
 const AppointmentHeader = ({date,setDate}) => {
 
     return (
