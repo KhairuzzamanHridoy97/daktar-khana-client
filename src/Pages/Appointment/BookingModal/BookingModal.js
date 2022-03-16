@@ -6,6 +6,7 @@ import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
+import { TextField } from '@mui/material';
 
 
 const style = {
@@ -21,8 +22,14 @@ const style = {
 };
 
 
-const BookingModal = ({openBooking,handleBookingClose,booking}) => {
+const BookingModal = ({openBooking,handleBookingClose,booking,date}) => {
     const {name,time}=booking;
+
+    const handleBookSubmit =(e)=>{ 
+        alert('Submitted') 
+        e.preventDefault();
+        handleBookingClose();
+    }
     
 
     return (
@@ -42,9 +49,41 @@ const BookingModal = ({openBooking,handleBookingClose,booking}) => {
             <Typography id="spring-modal-title" variant="h6" component="h2">
                 {name}
             </Typography>
-            <Typography id="spring-modal-description" sx={{ mt: 2 }}>
-            {time}
-            </Typography>
+            <form onSubmit={handleBookSubmit} >
+            <TextField
+            disabled // eta dile edit kora jayna
+                id="outlined-size-small"
+                defaultValue={time}
+               sx={{width:"90%",m:1}}
+                size="small"
+            />
+            <TextField
+                id="outlined-size-small"
+                sx={{width:"90%",m:1}}
+                defaultValue="Your Name"
+                size="small"
+            />
+            <TextField
+                id="outlined-size-small"
+                sx={{width:"90%",m:1}}
+                defaultValue="Your Email"
+                size="small"
+            />
+            <TextField
+                id="outlined-size-small"
+                sx={{width:"90%",m:1}}
+                defaultValue="Your Phone"
+                size="small"
+            />
+            <TextField
+            disabled
+                id="outlined-size-small"
+                sx={{width:"90%",m:1}}
+                defaultValue={date.toDateString()}
+                size="small"
+            />
+            <Button type='submit'  variant="contained">Submit</Button>
+            </form>
           </Box>
         </Fade>
       </Modal>
