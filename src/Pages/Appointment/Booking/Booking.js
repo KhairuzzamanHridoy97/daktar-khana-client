@@ -28,6 +28,7 @@ const Booking = ({ booking }) => {
                 </Paper>
             </Grid>
             <BookingModal 
+            booking={booking}
             handleBookingClose={handleBookingClose}
             openBooking={openBooking}
             >

@@ -6,8 +6,6 @@ import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
-// web.cjs is required for IE11 support
-
 
 
 const style = {
@@ -23,7 +21,8 @@ const style = {
 };
 
 
-const BookingModal = ({openBooking,handleBookingClose}) => {
+const BookingModal = ({openBooking,handleBookingClose,booking}) => {
+    const {name,time}=booking;
     
 
     return (
@@ -41,10 +40,10 @@ const BookingModal = ({openBooking,handleBookingClose}) => {
         <Fade in={openBooking}>
           <Box sx={style}>
             <Typography id="spring-modal-title" variant="h6" component="h2">
-              Text in a modal
+                {name}
             </Typography>
             <Typography id="spring-modal-description" sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+            {time}
             </Typography>
           </Box>
         </Fade>
