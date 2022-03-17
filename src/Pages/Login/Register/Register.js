@@ -39,6 +39,15 @@ const Register = () => {
             <TextField 
             sx={{width:'75%',m:1}}
             id="standard-basic" 
+            label="Name" 
+            type="text"
+            name="name"
+            onChange={handleOnChange}
+            variant="standard" 
+            />
+            <TextField 
+            sx={{width:'75%',m:1}}
+            id="standard-basic" 
             label="Email" 
             type="email"
             name="email"

@@ -8,8 +8,6 @@ import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 
 
-
-
 function App() {
   return (
     <div className="App">
