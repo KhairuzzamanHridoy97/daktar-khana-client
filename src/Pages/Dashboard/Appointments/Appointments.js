@@ -14,7 +14,7 @@ const Appointments = ({date}) => {
     const [appointments,setAppointment]= useState([])
 
     useEffect(()=>{
-        const url = `https://desolate-springs-79373.herokuapp.com/appointments?email=${user.email}&date=${date.toLocaleDateString()}`
+        const url = `https://desolate-springs-79373.herokuapp.com/appointments?email=${user.email}&date=${date}`
         fetch(url)
         .then(res=>res.json())
         .then(data=>setAppointment(data));
