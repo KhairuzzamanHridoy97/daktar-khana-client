@@ -26,7 +26,7 @@ import { fontWeight } from '@mui/lab/node_modules/@mui/system';
     },
     {
         name: 'Teeth Whitening',
-        description: "The natural yellow and blue/grey tooth shades will whiten faster than a tooth with added stains from medication, tobacco, and food. Teeth with a natural yellow shade will generally whiten in about 1–2 weeks, whereas teeth with a blue/grey shade can take twice as long.",
+        description: "The natural yellow and blue/grey tooth shades will whiten faster than a tooth with added stains from medication, tobacco, and food. Teeth with a natural yellow shade will generally whiten in about 1/2 weeks, whereas teeth with a blue/grey shade can take twice as long.",
         img: whitening
     }
 ]
