@@ -8,10 +8,10 @@ import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 
 
+
 function App() {
   return (
     <div className="App">
-
       <AuthProvider>
         <Router>
           <Switch>
@@ -28,7 +28,7 @@ function App() {
                 <Register></Register>
             </Route>
             <PrivateRoute path='/appointment'>
-              <Appointment></Appointment>
+                <Appointment></Appointment>
             </PrivateRoute>
             
           </Switch>
