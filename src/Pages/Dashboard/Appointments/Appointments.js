@@ -9,16 +9,16 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 
-const Appointments = () => {
+const Appointments = ({date}) => {
     const {user} = useAuth();
     const [appointments,setAppointment]= useState([])
 
     useEffect(()=>{
-        const url = `http://localhost:5000/appointments?email=${user.email}`
+        const url = `http://localhost:5000/appointments?email=${user.email}&date=${date}`
         fetch(url)
         .then(res=>res.json())
         .then(data=>setAppointment(data));
-    },[])
+    },[date])
     return (
         <div>
             <h2> Appointments: {appointments.length}</h2>
@@ -42,7 +42,7 @@ const Appointments = () => {
                 {row.patientName}
               </TableCell>
               <TableCell align="right">{row.time}</TableCell>
-              <TableCell align="right">{row.service}</TableCell>
+              <TableCell align="right">{row.serviceName}</TableCell>
               <TableCell align="right">{row.carbs}</TableCell>
               <TableCell align="right">{row.protein}</TableCell>
             </TableRow>
